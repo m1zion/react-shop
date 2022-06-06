@@ -29,7 +29,8 @@ module.exports = {
                 ]
             },
             {  // Configuracion del plugin de estilos MiniCssExtractPlugin
-                test: /\.s[ac]ss$/i,
+                //test: /\.s[ac]ss$/i,
+                test: /\.(css|scss)$/i,
                 use:[
                     "style-loader",
                     "css-loader",

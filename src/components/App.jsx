@@ -1,8 +1,12 @@
 import React from 'react';
-import '../styles/global.scss'
-const App = () => {
+import Layout from '../containers/Layout';
+import Login from '../containers/Login';
+import '../styles/global.css'
+const App = () => {  //aqui iran los contenedores que creamo, se pueden ir anidando
     return (
-        <h1>Hello </h1>
+        <Layout>    
+            <Login/>
+        </Layout>
     );
 }
 
