@@ -6,6 +6,7 @@ import Login from '../containers/Login';
 import RecoveryPassword from '../containers/RecoveryPassword';
 import '../styles/global.css';
 import Home from '../pages/Home';
+import MyAccount from '../containers/Login';
 import NotFound from '../pages/NotFound';
 //Eb el curso se utiliza switch para las rutas pero ahora es Routes
 //https://reactrouter.com/docs/en/v6/getting-started/overview#configuring-routes
@@ -15,7 +16,8 @@ const App = () => {  //aqui iran los contenedores que creamo, se pueden ir anida
             <Layout>
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route exact path="/login" element={<Login />} />			
+                    <Route exact path="/login" element={<Login />} />	
+                    <Route exact path="/MyAccount" element={<MyAccount />} />			
                     <Route exact path="/recovery-password" element={<RecoveryPassword />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
