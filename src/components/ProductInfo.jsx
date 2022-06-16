@@ -3,12 +3,9 @@ import '../styles/ProductInfo.scss';
 /* CLASE 12 */
 const ProductInfo = () => {
     return(
-        <aside className="product-detail">
-        <div className="product-detail-close">
-          <img src="./icons/icon_close.png" alt="close"/>
-        </div>
-        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike"/>
-        <div className="product-info">
+      <>
+        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike"/>      
+        <div className="ProductInfo">
           <p>$35,00</p>
           <p>Bike</p>
           <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
@@ -17,7 +14,7 @@ const ProductInfo = () => {
             Add to cart
           </button>
         </div>
-      </aside>
+        </>
     );
 }
 export default ProductInfo;

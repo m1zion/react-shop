@@ -3,7 +3,7 @@ import '../styles/Menu.scss';
 /* CLASE 7 */
 const Menu = () => {
     return(
-        <div className="desktop-menu">
+        <div className="Menu">
         <ul>
           <li>
             <a href="/" className="title">My orders</a>

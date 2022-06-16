@@ -2,15 +2,15 @@ import React from 'react';
 //import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from '../containers/Layout';
+import Home from '../pages/Home';
 import Login from '../containers/Login';
 import RecoveryPassword from '../containers/RecoveryPassword';
 import '../styles/global.css';
-import Home from '../pages/Home';
 import MyAccount from '../containers/Login';
 import NotFound from '../pages/NotFound';
 //Eb el curso se utiliza switch para las rutas pero ahora es Routes
 //https://reactrouter.com/docs/en/v6/getting-started/overview#configuring-routes
-const App = () => {  //aqui iran los contenedores que creamo, se pueden ir anidando
+const App = () => {  //aqui iran los contenedores que creamos, se pueden ir anidando
     return (    
         <BrowserRouter>
             <Layout>
@@ -25,7 +25,6 @@ const App = () => {  //aqui iran los contenedores que creamo, se pueden ir anida
         </BrowserRouter> 
     );
 }
-
 /*      <BrowserRouter>
     <Switch>
         <Layout>
