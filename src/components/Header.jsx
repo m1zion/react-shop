@@ -2,12 +2,11 @@ import React from 'react';
 import '../styles/Header.scss';
 const Header = () => {
     return(
-        <nav>
+        <nav className='navbar'>
         <img src="./icons/icon_menu.svg" alt="menu" className="menu"/>
     
         <div className="navbar-left">
-          <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo"/>
-    
+          <img src="./logos/logo24_7.png" alt="logo" className="logo"/>
           <ul>
             <li>
               <a href="/">CAR AUDIO</a>
