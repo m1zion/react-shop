@@ -10,22 +10,22 @@ const Header = () => {
     
           <ul>
             <li>
-              <a href="/">All</a>
+              <a href="/">CAR AUDIO</a>
             </li>
             <li>
-              <a href="/">Clothes</a>
+              <a href="/">AUTOESTEREOS</a>
             </li>
             <li>
-              <a href="/">Electronics</a>
+              <a href="/">WOOFERS</a>
             </li>
             <li>
-              <a href="/">Furnitures</a>
+              <a href="/">SUBWOOFERS</a>
             </li>
             <li>
-              <a href="/">Toys</a>
+              <a href="/">AMPLIFICADORES</a>
             </li>
             <li>
-              <a href="/">Others</a>
+              <a href="/">TWITTERS</a>
             </li>
           </ul>
         </div>
