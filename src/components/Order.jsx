@@ -1,4 +1,4 @@
-import React from React;
+import React from 'react';
 import '../styles/Order.scss';
 /* CLASE 9 */
 const Order = () => {

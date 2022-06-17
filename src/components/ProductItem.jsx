@@ -1,4 +1,4 @@
-import React from react;
+import React from 'react';
 import '../styles/ProductItem.scss';
 /* CLASE 6 */
 const ProductItem = () => {

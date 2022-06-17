@@ -1,4 +1,4 @@
-import React from React;
+import React from 'react';
 import '../styles/Menu.scss';
 /* CLASE 7 */
 const Menu = () => {
