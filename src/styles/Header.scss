@@ -63,6 +63,10 @@ nav {
     justify-content: center;
     align-items: center;
   }
+
+  .shopping_cart_icon{
+    color: var(--white);
+  }
   @media (max-width: 640px) {
     .menu {
       display: block;
