@@ -9,5 +9,8 @@ npm install sass-loader -D
 
 
 Instalacion de Router
-
 npm install react-router-dom
+
+Intalacion de axios para hacer las peticiones a la API
+npm install axios
+npm install @babel/plugin-transform-runtime
