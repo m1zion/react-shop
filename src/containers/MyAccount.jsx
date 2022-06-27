@@ -22,4 +22,4 @@ const MyAccount = () => {
       </div>
     );
 }
-export default Login;
+export default MyAccount;

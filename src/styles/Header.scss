@@ -10,9 +10,21 @@ nav {
   }
   .nav-logo {
     width: 130px;
+    object-fit:contain;
+  }
+  .input-search{
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    font-size: var(--md);
+    padding: 6px;
+    width: 300px;
   }
   .navbar{
     background-color: var(--black247);
+    display: flex;
+    flex-direction: column;
   }
   .navbar-left ul,
   .navbar-right ul {
@@ -36,14 +48,14 @@ nav {
   .navbar-right ul li a {
     text-decoration: none;
     color: var(--very-light-pink);
-    border: 1px solid var(--white);
+    /*border: 1px solid var(--white);*/
     padding: 8px;
     border-radius: 8px;
   }
   .navbar-left ul li a:hover,
   .navbar-right ul li a:hover {
-    border: 1px solid var(--hospital-green);
-    color: var(--hospital-green);
+    /*border: 1px solid var(--hospital-green);*/
+    color: var(--logo-green);
   }
   .navbar-email {
     color: var(--very-light-pink);
@@ -57,7 +69,7 @@ nav {
   .navbar-shopping-cart div {
     width: 16px;
     height: 16px;
-    background-color: var(--hospital-green);
+    background-color: var(--logo-green);
     border-radius: 50%;
     font-size: var(--sm);
     font-weight: bold;
@@ -77,6 +89,18 @@ nav {
     width: 25px;
     height: 25px;
   }
+  .navbar-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .push{
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
   @media (max-width: 640px) {
     .menu {
       display: block;
@@ -87,4 +111,9 @@ nav {
     .navbar-email {
       display: none;
     }
+    .navbar-top input{
+    
+      display: none;
+    }
+  
   }

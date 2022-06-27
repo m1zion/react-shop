@@ -13,44 +13,56 @@ const Header = () => {
     }
     return(
         <nav className='navbar'>
-        <img src={menu} alt="menu" className="menu"/>
-    
-        <div className="navbar-left">
-          <img src={logo} alt="logo" className="nav-logo"/>
-          <ul>
-            <li>
-              <a href="/">CAR AUDIO</a>
-            </li>
-            <li>
-              <a href="/">AUTOESTEREOS</a>
-            </li>
-            <li>
-              <a href="/">WOOFERS</a>
-            </li>
-            <li>
-              <a href="/">SUBWOOFERS</a>
-            </li>
-            <li>
-              <a href="/">AMPLIFICADORES</a>
-            </li>
-            <li>
-              <a href="/">TWITTERS</a>
-            </li>
-          </ul>
-        </div>
-    
-        <div className="navbar-right">
-          <ul>
-            <li className="navbar-email" onClick= {handleToggle}>platzi@example.com</li>
-            <li><img src={account} alt='account_icon' className='account_icon'></img></li>
-            <li className="navbar-shopping-cart">
-              <img src={shopping_cart} alt="shopping cart" className='shopping_cart_icon'/>
-              <div>2</div>
-            </li>
-            <li><img src={logout} alt='logout' className="logout_icon"></img></li>
-          </ul>
-        </div>
-        {toggle ? <Menu/> : ""}
+          <div className='navbar-top'>
+            <img src={menu} alt="menu" className="menu"/>
+            <div className="navbar-left">
+              <img src={logo} alt="logo" className="nav-logo"/>
+            </div>
+            <input type="text" id="search" placeholder="Buscar productos" className="input-search push"/>
+            <div className="navbar-right">
+              <ul>
+                <li className="navbar-email" onClick= {handleToggle}>email@example.com</li>
+                <li><img src={account} alt='account_icon' className='account_icon'></img></li>
+                <li className="navbar-shopping-cart">
+                  <img src={shopping_cart} alt="shopping cart" className='shopping_cart_icon'/>
+                  <div>2</div>
+                </li>
+                <li><img src={logout} alt='logout' className="logout_icon"></img></li>
+              </ul>
+            </div>
+            {toggle ? <Menu/> : ""}
+          </div>
+          <div className="navbar-left">
+            <ul>
+                <li>
+                  <a href="/">Car Audio</a>
+                </li>
+                <li>
+                  <a href="/">Autoestereos</a>
+                </li>
+                <li>
+                  <a href="/">Woofers</a>
+                </li>
+                <li>
+                  <a href="/">Subwoofers</a>
+                </li>
+                <li>
+                  <a href="/">Amplificadores</a>
+                </li>
+                <li>
+                  <a href="/">Twitters</a>
+                </li>
+                <li>
+                  <a href="/">Iluminacion</a>
+                </li>
+                <li>
+                  <a href="/">Marino</a>
+                </li>            
+                <li>
+                  <a href="/">Contacto</a>
+                </li>
+            </ul>
+          </div>
       </nav>
     );
 }
