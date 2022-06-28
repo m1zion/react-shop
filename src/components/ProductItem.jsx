@@ -13,7 +13,7 @@ return (
     <div className="product-info">
       <div>
         <p>${product.price}</p>
-        <p>{product.title}}</p>
+        <p>{product.title}</p>
       </div>
       <figure onClick={ handleClick }>
         <img src={add_to_cart} alt="" />
