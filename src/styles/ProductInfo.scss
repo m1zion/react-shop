@@ -18,8 +18,10 @@
     padding: 12px;
     border-radius: 50%;
   }
-  .productInfo-price-containeter{
+  .productInfo-price-container{
     display: flex;
+    border-bottom: 2px solid var(--border-green);
+    padding-bottom: 15px;
   }
   .ProductInfo-close:hover {
     cursor: pointer;
@@ -36,6 +38,7 @@
   }
   .productActions p{
     margin-bottom: 0;
+    color: var(--gray-letter);
   }
   .productActionsButtons {
     display: flex;
@@ -54,7 +57,7 @@
     margin: 24px 24px 0 24px;
     background-color: var(--white);
   }
-  .ProductInfo div p:nth-child(1) {
+  .priceInfo p:nth-child(1) { /*Oferta valida*/
     font-weight: bold;
     font-size: var(--md);
     margin-top: 0;
@@ -62,26 +65,43 @@
     color: var(--white);
     background-color: var(--price);
   }
-  .priceInfo p:nth-child(2)  {
-    /*color: var(--very-light-pink);*/
+  .priceInfo p:nth-child(2)  { /*Precio normal*/
     font-size: var(--md);
     margin-top: 8px;
     margin-bottom: 2px;
     color: var(--gray-letter);
     text-decoration:line-through;
   }
-  .priceInfo p:nth-child(3)  {
+  .priceInfo p:nth-child(3)  { /*Precio descuento*/
     font-size: var(--lg);
     margin-top: 0;
     margin-bottom: 0;
     color: var(--price);
   }
-  .priceInfo p:nth-child(5)  {
+  .priceInfo p:nth-child(5)  { /*SKU*/
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 0;
     color: var(--black);
     font-weight: 600;
+  }
+  .priceInfo p:nth-child(6)  { /*Descripcion*/
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  .productInfo-description-container p:nth-child(1){
+    color: var(--gray-letter);
+    font-weight:600;
+  }
+  .productInfo-description-container p:nth-child(2){
+    color: var(--gray-letter);
+  }
+
+
+  .ProductInfo p:nth-child(5) {
+      color: purple;
   }
   .primary-button {
     background-color: var(--logo-green);
@@ -93,6 +113,9 @@
     font-size: var(--md);
     font-weight: bold;
     height: 50px;
+  }
+  .primary-button-detail {
+    height: 40px;
   }
   .add-to-cart-button {
     display: flex;

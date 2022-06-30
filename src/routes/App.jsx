@@ -12,24 +12,29 @@ import NotFound from '@pages/NotFound';
 import Orders from '../pages/Orders';
 import ProductDetail from '../pages/ProductDetail';
 import Checkout from '../pages/Checkout';
+import AppContext from '@context/AppContext';
+import useInitialState from '@hooks/useInitialState';
 //Eb el curso se utiliza switch para las rutas pero ahora es Routes
 //https://reactrouter.com/docs/en/v6/getting-started/overview#configuring-routes
 const App = () => {  //aqui iran los contenedores que creamos, se pueden ir anidando
-    return (    
-        <BrowserRouter>
-            <Layout>
-                <Routes>
-                    <Route exact path="/" element={<Home />} />
-                    <Route exact path="/login" element={<Login />} />	
-                    <Route exact path="/productDetail" element={<ProductDetail/> } />
-                    <Route exact path="/MyAccount" element={<MyAccount />} />			
-                    <Route exact path="/recovery-password" element={<RecoveryPassword />} />
-                    <Route exact path="/orders" element={<Orders/>} />
-                    <Route exact path="/checkout" element={<Checkout/>} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
-            </Layout>
-        </BrowserRouter> 
+    const initialState = useInitialState();  //State y addToCart
+    return (  
+        <AppContext.Provider value={initialState}>
+            <BrowserRouter>
+                <Layout>
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route exact path="/login" element={<Login />} />	
+                        <Route exact path="/productDetail" element={<ProductDetail/> } />
+                        <Route exact path="/MyAccount" element={<MyAccount />} />			
+                        <Route exact path="/recovery-password" element={<RecoveryPassword />} />
+                        <Route exact path="/orders" element={<Orders/>} />
+                        <Route exact path="/checkout" element={<Checkout/>} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </Layout>
+            </BrowserRouter> 
+        </AppContext.Provider>  
     );
 }
 /*      <BrowserRouter>

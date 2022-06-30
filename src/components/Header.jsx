@@ -27,6 +27,7 @@ const Header = () => {
                 <li className="navbar-email" onClick= {handleToggle}>email@example.com</li>
                 <li><img src={account} alt='account_icon' className='account_icon'></img></li>
                 <li className="navbar-shopping-cart">
+                  <i class="fa fa-cart-shopping"></i>
                   <img src={shopping_cart} alt="shopping cart" className='shopping_cart_icon'/>
                   <div>2</div>
                 </li>
