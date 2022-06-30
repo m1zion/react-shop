@@ -1,4 +1,4 @@
-import React, { useRef} from 'react';
+import React, { useRef } from 'react';
 import '@styles/Login.scss';
 const Login = () => {
     const form = useRef(null);

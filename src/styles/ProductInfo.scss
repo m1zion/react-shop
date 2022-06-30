@@ -1,10 +1,13 @@
-.product-detail {
+@import 'vars';
+ .ProductInfo {
     width: 360px;
     padding-bottom: 24px;
     position: absolute;
     right: 0;
+    padding: 10px 15px;
+    border-radius: 10px;
   }
-  .product-detail-close {
+  .ProductInfo-close {
     background: var(--white);
     width: 14px;
     height: 14px;
@@ -15,10 +18,33 @@
     padding: 12px;
     border-radius: 50%;
   }
-  .product-detail-close:hover {
+  .productInfo-price-containeter{
+    display: flex;
+  }
+  .ProductInfo-close:hover {
     cursor: pointer;
   }
-  .product-detail > img:nth-child(2) {
+  .productActions{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding-left: 10px;
+  }
+  .productActions p:last-of-type {
+    margin-top: auto;
+    text-align: end;
+  }
+  .productActions p{
+    margin-bottom: 0;
+  }
+  .productActionsButtons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  .mainImage {
     width: 100%;
     height: 360px;
     object-fit: cover;
@@ -26,27 +52,39 @@
   }
   .ProductInfo {
     margin: 24px 24px 0 24px;
+    background-color: var(--white);
   }
-  .ProductInfo p:nth-child(1) {
+  .ProductInfo div p:nth-child(1) {
     font-weight: bold;
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 4px;
+    color: var(--white);
+    background-color: var(--price);
   }
-  .ProductInfo p:nth-child(2) {
-    color: var(--very-light-pink);
+  .priceInfo p:nth-child(2)  {
+    /*color: var(--very-light-pink);*/
+    font-size: var(--md);
+    margin-top: 8px;
+    margin-bottom: 2px;
+    color: var(--gray-letter);
+    text-decoration:line-through;
+  }
+  .priceInfo p:nth-child(3)  {
+    font-size: var(--lg);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--price);
+  }
+  .priceInfo p:nth-child(5)  {
     font-size: var(--md);
     margin-top: 0;
-    margin-bottom: 36px;
-  }
-  .ProductInfo p:nth-child(3) {
-    color: var(--very-light-pink);
-    font-size: var(--sm);
-    margin-top: 0;
-    margin-bottom: 36px;
+    margin-bottom: 0;
+    color: var(--black);
+    font-weight: 600;
   }
   .primary-button {
-    background-color: var(--hospital-green);
+    background-color: var(--logo-green);
     border-radius: 8px;
     border: none;
     color: var(--white);
@@ -62,7 +100,5 @@
     justify-content: center;
   }
   @media (max-width: 640px) {
-    .product-detail {
-      width: 100%;
-    }
+
   }

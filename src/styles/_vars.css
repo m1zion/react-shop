@@ -3,11 +3,13 @@
     --black: #000000;
     --black247: #1D1D1B;
     --very-light-pink: #C7C7C7;
+    --gray-letter: #707575;
     --text-input-field: #F7F7F7;
     --hospital-green: #ACD9B2;
     --background-green: #F2F2E1;
     --border-green: #D2D3AE;
-    --logo-green: #C4CC04;
+    --logo-green: #B1B803;
+    /* #C4CC04;  darker: #B1B803*/
     --black-green: #1D1D1B;
     --price: #ED690A;
     --border-item: #B8B992;

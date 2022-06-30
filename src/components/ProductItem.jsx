@@ -17,6 +17,7 @@ return (
     <div className="product-info">
       <div>
         <p>{product.title}</p>
+        <p>${product.price}Dis</p>
         <p>${product.price}</p>
       </div>
       {cart}

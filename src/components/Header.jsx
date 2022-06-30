@@ -18,7 +18,10 @@ const Header = () => {
             <div className="navbar-left">
               <img src={logo} alt="logo" className="nav-logo"/>
             </div>
-            <input type="text" id="search" placeholder="Buscar productos" className="input-search push"/>
+            <div class="form-group fg--search">
+              <input type="text" id="search" placeholder="Buscar productos" className="input-search push"/>
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
             <div className="navbar-right">
               <ul>
                 <li className="navbar-email" onClick= {handleToggle}>email@example.com</li>
