@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../styles/Header.scss';
 import menu from '@icons/icon_menu_white.svg';
 import logo from '@logos/logo24_7.png';
@@ -6,8 +6,10 @@ import shopping_cart from '@icons/icon_shopping_cart_white.svg';
 import account from '@icons/Login_white.svg';
 import logout from '@icons/logout.svg';
 import Menu from '@components/Menu';
+import AppContext from '@context/AppContext'
 const Header = () => {
     const [toggle,setToggle] = useState(false);
+    const { state } = useContext(AppContext);
     const handleToggle = () => {
       setToggle(!toggle);
     }
@@ -18,18 +20,18 @@ const Header = () => {
             <div className="navbar-left">
               <img src={logo} alt="logo" className="nav-logo"/>
             </div>
-            <div class="form-group fg--search">
+            <div className="form-group fg--search">
               <input type="text" id="search" placeholder="Buscar productos" className="input-search push"/>
-              <button type="submit"><i class="fa fa-search"></i></button>
+              <button type="submit"><i className="fa fa-search"></i></button>
             </div>
             <div className="navbar-right">
               <ul>
                 <li className="navbar-email" onClick= {handleToggle}>email@example.com</li>
                 <li><img src={account} alt='account_icon' className='account_icon'></img></li>
                 <li className="navbar-shopping-cart">
-                  <i class="fa fa-cart-shopping"></i>
+                  <i className="fa fa-cart-shopping"></i>
                   <img src={shopping_cart} alt="shopping cart" className='shopping_cart_icon'/>
-                  <div>2</div>
+                  {state.cart.lenght > 0 ? <div>state.cart.lenght</div> : null }
                 </li>
                 <li><img src={logout} alt='logout' className="logout_icon"></img></li>
               </ul>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-const initialState ={
+const initialState = {
     cart:[],
 }
 const useInitialState = () =>{
@@ -14,7 +14,7 @@ const useInitialState = () =>{
             }
         );
     };
-    return{
+    return {
         state,
         addToCart
     }

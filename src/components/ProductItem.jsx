@@ -12,6 +12,7 @@ const {addToCart} = useContext(AppContext);
 //Este lo obtenemos el onclik
 const handleClick = item =>{
   addToCart(item);
+  console.log("item")
 }
 
 return (
@@ -25,8 +26,8 @@ return (
         <p>${product.price}Dis</p>
         <p>${product.price}</p>
       </div>
-      <figure onClick={() => handleClick(product) }>
-        <img classname = "addToCart" src={add_to_cart} alt="" />
+      <figure onClick={() => handleClick(product)}>
+        <img className = "addToCart" src={add_to_cart} alt="" />
       </figure>
     </div>
   </div>
