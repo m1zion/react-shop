@@ -7,12 +7,14 @@ border-radius:20px;
 border: 1px solid var(--border-item);
 position: relative;
 }
-.ProductItem img:nth-child(1) {
+//.ProductItem img:nth-child(1) {
+.ProductItemImage {
 width: 240px;
 height: 240px;
 border-radius:20px 20px 0 0;
 object-fit: none;
 background-color: white;
+/*border: 1px solid red;*/
 }
 .ProductItem-sale{
     position: absolute;
@@ -40,9 +42,9 @@ margin: 0;
 width: 35px;
 height: 35px;
 }
-.addToCart{
-    width: 35px;
-    height: 35px;
+.product-info figure img {
+	width: 35px;
+	height: 35px;
 }
 .product-info div p:nth-child(1) {
 font-weight: bold;

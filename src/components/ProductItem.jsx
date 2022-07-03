@@ -16,7 +16,7 @@ const handleClick = item =>{
 
 return (
   <div className="ProductItem">
-    <img src={producto} alt="{product.title}" />
+    <img  className="ProductItemImage"  src={producto} alt="{product.title}" />
     <img src={sale} className="ProductItem-sale" alt="sale"/>
     <p className='ProductItem-sale-text'>Oferta</p>
     <div className="product-info">
