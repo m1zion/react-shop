@@ -1,0 +1,13 @@
+AppContext.jsx
+1. Creamos el contexto que va a usar la API y lo exportamos para poder ser usado
+
+App.jsx
+2. Conectar context a la aplicacion en 
+import AppContext from '@context/AppContext';
+
+3. Trabajar con el provider para compartir esa informacion, sobre el return
+<AppContext.Provider value={initialState}>
+</AppContext.Provider> 
+
+useInitialState.js
+4. Creamos un custom Hook que va a agregar los items al carrito

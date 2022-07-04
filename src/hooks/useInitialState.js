@@ -1,16 +1,16 @@
 import { useState } from "react";
-const initialState = {
+const initialState = {  //
     cart:[],
 }
-const useInitialState = () =>{
+const useInitialState = () =>{  //Funcion para inicializar el estado
     const [state, setState] = useState(initialState);
-    //manten el estado ... significa que mantenga lo que ya este, y agregar lo que le pasemos
+
     //payload seria el producto
     const addToCart = (payload) =>{
         setState(
             {
-                ...state,
-                cart:[...state.cart, payload]
+                ...state,  //manten el estado ... significa que mantenga lo que ya este, osea que se quedan los elementos que ya teniamos
+                cart:[...state.cart, payload]     //agregar lo que le pasemos
             }
         );
     };
