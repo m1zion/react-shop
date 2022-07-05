@@ -8,9 +8,11 @@
     right: 0;
     background-color: white;
     top: 60px;
-    bottom: 0;
+    bottom: auto;
     border-radius: 6px;
     border: 1px solid var(--very-light-pink);
+    z-index: 1;
+    /*animation: swipeDown 0.26s ease;*/
 }
 .title-container {
     display: flex;
@@ -57,6 +59,16 @@
     font-weight: bold;
     height: 50px;
 }
+
+@keyframes swipeDown {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 360px;
+    }
+  }
+
 @media (max-width: 640px) {
 .MyOrder {
     width: 100%;

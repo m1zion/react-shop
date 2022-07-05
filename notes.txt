@@ -10,4 +10,40 @@ import AppContext from '@context/AppContext';
 </AppContext.Provider> 
 
 useInitialState.js
-4. Creamos un custom Hook que va a agregar los items al carrito
+4. Creamos un custom Hook que va a agregar los items al carrito, este lo vamos a importatar en productItem y en App.jsx
+
+productItem.jsx
+5. Conectar este elemento. Usamos el usecontext
+    const {addToCart} = useContext(AppContext); //Llamamos el estado
+
+
+CLASE 23 Transmitir la informacion al componente.
+header.jsx
+ 1. Agregar eñ cpmtexto
+ import React, { useState, useContext } from 'react';
+ import AppContext from '@context/AppContext';
+
+
+
+
+CLASE 24 agregar el toogle de las ordenes
+En header.jsx
+1. Agregamos la constante de toogle
+2. Importamos Myorder
+
+
+clase 25  hacer la suma de orderItem, en orderItem.jsx
+
+const sumTotal = () =>{  //se puede convertir en un hook si se quiere usar mas veces
+    const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
+    const sum = state.cart.reduce(reducer,0);
+    return sum;
+}
+
+clase 26 Eliminando items del carrito  orderItem.jsx
+  const { removeFromCart } = useContext(AppContext);
+    const handleRemove = product => {
+      removeFromCart(product);
+    }
+
+/*https://www.iloveimg.com/resize-image#resize-options,pixels*/ resize images

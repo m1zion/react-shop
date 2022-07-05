@@ -7,7 +7,7 @@ import sale from '@images/sale_tag.png';
 import add_to_cart from '@icons/bt_add_to_cart.svg'
 /* CLASE 6 */
 const ProductItem = ({product}) => {
-const {addToCart} = useContext(AppContext);
+const {addToCart} = useContext(AppContext); //Llamamos el estado
 
 //Este lo obtenemos el onclik
 const handleClick = item =>{
