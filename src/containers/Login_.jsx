@@ -4,7 +4,7 @@ const Login = () => {
     return (
         <div className="login">
         <div className="login-container">  
-          <p class="title">Iniciar sesión</p>     
+          <p className="title">Iniciar sesión</p>     
           <form action="/" className="form">
             <label for="email" className="label">Usuario</label>
             <input type="text" id="email" placeholder="ejemplo@247.com" className="input input-email"/>
@@ -12,8 +12,8 @@ const Login = () => {
             <input type="password" id="password" placeholder="*********" className="input input-password"/>
             <input type="submit" value="Ingresar" className="primary-button login-button"/>
           </form>
-          <button class="secondary-button signup-button">Registrarse</button>
-          <a class="forget" href="/">¿Olvidaste tu contraseña?</a>
+          <button className="secondary-button signup-button">Registrarse</button>
+          <a className="forget" href="/">¿Olvidaste tu contraseña?</a>
         </div>
       </div>
     );

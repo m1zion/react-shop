@@ -47,33 +47,15 @@ const Header = () => {
           </div>
           <div className="navbar-left">
             <ul>
-                <li>
-                  <a href="/">Car Audio</a>
-                </li>
-                <li>
-                  <a href="/">Autoestereos</a>
-                </li>
-                <li>
-                  <a href="/">Woofers</a>
-                </li>
-                <li>
-                  <a href="/">Subwoofers</a>
-                </li>
-                <li>
-                  <a href="/">Amplificadores</a>
-                </li>
-                <li>
-                  <a href="/">Twitters</a>
-                </li>
-                <li>
-                  <a href="/">Iluminacion</a>
-                </li>
-                <li>
-                  <a href="/">Marino</a>
-                </li>            
-                <li>
-                  <a href="/">Contacto</a>
-                </li>
+                <li><a href="/">Car Audio</a></li>
+                <li><a href="/">Autoestereos</a></li>
+                <li><a href="/">Woofers</a></li>
+                <li><a href="/">Subwoofers</a></li>
+                <li><a href="/">Amplificadores</a></li>
+                <li><a href="/">Twitters</a></li>
+                <li><a href="/">Iluminacion</a></li>
+                <li><a href="/">Marino</a></li>            
+                <li><a href="/">Contacto</a></li>
             </ul>
           </div>
       </nav>

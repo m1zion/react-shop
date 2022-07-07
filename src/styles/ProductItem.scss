@@ -42,10 +42,7 @@ margin: 0;
 width: 35px;
 height: 35px;
 }
-.product-info figure img {
-	width: 35px;
-	height: 35px;
-}
+
 .product-info div p:nth-child(1) {
 font-weight: bold;
 font-size: var(--md);
@@ -73,7 +70,12 @@ grid-template-columns: 240px; /*creo que no lo utiliza aun*/
 .ProductItem {
 width: 240px; /*140*/
 }
-.ProductItem img:nth-child(1) {
+.product-info figure img {
+    width: 35px;
+    height: 35px;
+}
+//.ProductItem img:nth-child(1) {
+.ProductItemImage {
 width: 240px; /*140*/
 height: 240px;
 }

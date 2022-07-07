@@ -15,3 +15,6 @@ npm install react-router-dom
 Instalacion de axios para consulta a la API
 npm install axios
 npm install @babel/plugin-transform-runtime
+
+Slide Show https://codesandbox.io/s/yjmol?file=/src/styles.css:0-775
+npm install react-slideshow-image 
