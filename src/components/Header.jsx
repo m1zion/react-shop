@@ -16,7 +16,7 @@ const Header = () => {
       setToggle(!toggle);
     }
     return(
-        <nav className='navbar'>
+        <nav className='navbar sticky'>
           <div className='navbar-top'>
             <img src={menu} alt="menu" className="menu"/>
             <div className="navbar-left">

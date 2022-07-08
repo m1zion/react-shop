@@ -1,63 +1,141 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import cart from '@icons/bt_add_to_cart.svg';
 import '@styles/ProductInfo.scss';
+import imagenMuestra from '@images/seeanddo-1000x1000-2.jpg';
 /* CLASE 12 */
-let slideIndex = 1;
-showSlides(slideIndex);
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+function ProductInfo() {
+    const [nav1, setNav1] = useState(null);
+    const [nav2, setNav2] = useState(null);
+    const [slider1, setSlider1] = useState(null);
+    const [slider2, setSlider2] = useState(null);
 
-    console.log('showslides function')
-}
-const ProductInfo = () => {
-    return(
-        <div className='container'>
-            <div className='mySlides'>
-                <div className='numbertext'>1 / 4</div>
-                    <img className='numbertext_image' src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
-                </div>
-                <div className='mySlides'>
-                <div className='numbertext'>2 / 4</div>
-                    <img  className='numbertext_image' src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
-                </div>
-            
-                <div className='mySlides'>
-                <div className='numbertext'>3 / 4</div>
-                    <img className='numbertext_image' src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
-                </div>
-            
-                <div className='mySlides'>
-                <div className='numbertext'>4 / 4</div>
-                    <img className='numbertext_image' src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
-                </div>
-
+    useEffect(() => {
+        setNav1(slider1);
+        setNav2(slider2);
+    });
+    const settingsMain = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    };
     
-                <div className='caption-container'>
-                <p id='caption'></p>
-                </div>
-            
-                <div className='row'>
-                <div className='column'>
-                    <img className='demo cursor' src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'  alt='The Woods'/>
-                </div>
-                <div className='column'>
-                    <img className='demo cursor' src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt='Cinque Terre'/>
-                </div>
-                <div className='column'>
-                    <img className='demo cursor' src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'  alt='Mountains and fjords'/>
-                </div>
-                <div className='column'>
-                    <img className='demo cursor' src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'  alt='Northern Lights'/>
-                </div>
+    const settingsThumbs = {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        swipeToSlide: true,
+        focusOnSelect: true,
+        centerPadding: '10px'
+    };
+         
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        lazyLoad: 'progressive', //It could also be ondemand
+        responsive: [
+            {
+            breakpoint: 400,
+            settings: {
+                arrows: false,
+                slidesToShow: 1
+            }
+            }
+        ]
+    };
+    const slidesData = [
+        {
+          id: 1,
+          title: 'repellendus id ullam',
+          label: 'Dolorem officiis temporibus.'
+        }, {
+          id: 2,
+          title: 'excepturi consequatur est',
+          label: 'Officia non provident dolor esse et neque.'
+        }, {
+          id: 3,
+          title: 'eius doloribus blanditiis',
+          label: 'Ut recusandae vel vitae molestiae id soluta.'
+        }, {
+          id: 4,
+          title: 'nihil voluptates delectus',
+          label: 'Qui vel consequatur recusandae illo repellendus.'
+        }, 
+    ];
+
+
+
+  return (
+    <div className="ProductInfo">
+    <p> </p>
+    <div className="slider-wrapper-a">
+        <Slider
+          {...settingsMain}
+          asNavFor={nav2}
+          ref={slider => (setSlider1(slider))}
+        >
+        {slidesData.map((slide) =>
+            <div className="slick-slide" key={slide.id}>
+              <h2 className="slick-slide-title">Auto Estereo Sony G347</h2>
+              {/*<h2 className="slick-slide-title">{slide.title}</h2>*/}
+              <img className="slick-slide-image-a" src={imagenMuestra} />
             </div>
+
+          )}
+        </Slider>
+        <div className="thumbnail-slider-wrap">
+          <Slider
+            {...settingsThumbs}
+            asNavFor={nav1}
+            ref={slider => (setSlider2(slider))}>
+            {slidesData.map((slide) =>
+              <div className="slick-slide" key={slide.id}>
+                <img className="slick-slide-image-a" src={`https://picsum.photos/800/400?img=${slide.id}`} />
+              </div>
+            )}
+          </Slider>
         </div>
-    );
+    </div>
+    <div className="productInfo-price-container">
+      <div className="priceInfo">
+        <p>Oferta valida: 10:25:30</p>
+        <p>Precio Normal</p>
+        <p>Precio descuento</p>
+        <p>Numero de Productos</p>
+        <p>SKU: KL029KKSLL966</p>
+      </div>
+      <div className="productActions">
+        <div className="productActionsButtons">
+          <button className="primary-button primary-button-detail">Comprar</button>
+          <button className="primary-button primary-button-detail">Agregar al carrito</button>
+        </div>
+        <p>20 Disponibles</p>
+      </div>
+    </div>
+    <div className='productInfo-description-container'>
+      <p>Descripción</p>
+      <p>La línea de receptores NEX o Networked Entertainment eXperience de Pioneer presenta 
+        una nueva interfaz de usuario innovadora y potente que responde y es altamente personalizable. 
+        Los modelos NEX están diseñados especialmente para el estilo de vida actual impulsado por teléfonos 
+        inteligentes.</p>
+      <button className="primary-button add-to-cart-button">
+        <img src={ cart } alt="add_to_cart" />
+        Add to cart
+      </button>
+    </div>
+
+  </div>
+  );
 }
+
+
 export default ProductInfo;
 
 

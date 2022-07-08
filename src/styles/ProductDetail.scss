@@ -1,0 +1,14 @@
+@import 'vars';
+.main-container{
+    padding-top:121px ;
+}
+
+.Product-detail {
+    display: flex;
+    justify-content: center;
+    /*display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+    margin: 3em 0 0 0;*/
+}

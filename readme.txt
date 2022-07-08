@@ -18,3 +18,6 @@ npm install @babel/plugin-transform-runtime
 
 Slide Show https://codesandbox.io/s/yjmol?file=/src/styles.css:0-775
 npm install react-slideshow-image 
+
+https://www.freakyjolly.com/react-slick-carousel-with-custom-navigation-and-lazy-loaded-images-in-slider/
+npm install react-slick slick-carousel --save
