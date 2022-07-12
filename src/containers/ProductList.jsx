@@ -12,8 +12,8 @@ let offset = '&offset='+'1';
 const API = 'https://api.escuelajs.co/api/v1/products'+limit+offset;
 const ProductList = () => {
     const products = useGetProducts(API);
+    // Estaba contenido en una <section className="main-container">
     return (
-        <section className="main-container">
             <div className="ProductList">
                 {
                     products.map(product => (
@@ -21,7 +21,6 @@ const ProductList = () => {
                     ))
                 }
             </div>
-        </section>
     );
 }
 

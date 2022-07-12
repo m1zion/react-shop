@@ -16,7 +16,7 @@ import AppContext from '@context/AppContext';
 import useInitialState from '@hooks/useInitialState';
 import AppS from '@pages/AppS';
 import App2 from '@pages/App2';
-//Eb el curso se utiliza switch para las rutas pero ahora es Routes
+//En el curso se utiliza switch para las rutas pero ahora es Routes
 //https://reactrouter.com/docs/en/v6/getting-started/overview#configuring-routes
 const App = () => {  //aqui iran los contenedores que creamos, se pueden ir anidando
     const initialState = useInitialState();  //State y addToCart
